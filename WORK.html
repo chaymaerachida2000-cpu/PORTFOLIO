@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Portofilo website</title>
+     <meta name="descrition" content="Full-Stack Developer Portfolio - Barcelona Code School student. Exploring React, Node.js and Web Design"/>
+    <meta name="author"  content="CHAIMAE"/>
+ <meta
+        name="keywords"
+        content="developer, fullstack, javascript developer, web and mobile developer portfolio, fullstack developer"
+    /> 
+    <link rel="short cut icon" href="./IMG/icon.webp" type="image/x-icon" />
+    <meta
+        property="og:description"
+        content="JavaScript Full-Stack Developer portfolio page with projects, contact information, experience and hourly rates"
+    />
+     <meta
+        property="og:image"
+        content="http://chai.sa-portofilo.surge.sh/IMG/fot.jpg"
+    />
+    <meta property="og:url" content="http://chai.sa-portofilo.surge.sh" />
+    <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+    
+ <nav>
+    <div class="nav-container">
+        <div class="logo">
+            <span>CHAIMAE</span>
+        </div>
+        <div class="links">
+            <div class="link"><a href="index.html">HOME</a> </div>
+            <div class="link"><a href="ABOUT-US.html">ABOUT-US</a></div>
+            <div class="link"><a href="SKILS.html">SKILS</a></div>
+            <div class="link"><a href="WORK.html">WORK</a></div>
+            <div class="link contact-boutun"><a href="#CONTACT-US">CONTAT-US</a> </div>
+     
+        </div>
+    </div> 
+        <i class="fa-solid fa-bars hamburg"></i>
+         <div class="dropdown">
+          <div class="links2">
+          <a href="index.html">HOME</a>
+          <a href="ABOUT-US.html">ABOUT-US</a>
+          <a href="SKILS.html">SKILS</a>
+          <a href="WORK.html">WORK</a>
+          <a href="#CONTACT-US">CONTACT-US</a>
+          <i class="fa-regular fa-circle-xmark cancel"></i>
+          
+        </div>
+      </div>
+ </nav> 
+  <script>
+             const hamburg = document.querySelector('.hamburg');
+             const cancel = document.querySelector('.cancel');
+             const dropdown = document.querySelector('.dropdown');
+
+          hamburg.addEventListener('click', () => {
+         dropdown.classList.add('active');
+    });
+
+    
+         cancel.addEventListener('click', () => {
+         dropdown.classList.remove('active');
+    });
+    </script>
+    <div class="HOME-WORK">
+    <img src="IMG/fabacc95e84c8d7e39667972aad1ed83.gif">
+    <h1>SOME OF MY PROJECTS</h1>
+    </div>
+    <div class="MY-PROJECT">
+    <img src="IMG/Capture d’écran 2026-04-09 071641.png">
+    <h2>WEB SITE POWER OF BEAUTY </h2>
+    
+    </div>
+    <div class="btn">
+        <button><a href="https://github.com/chaymaerachida2000-cpu/cloning-project-n1">CODE</a></button>
+        <button><a href="https://chaymaerachida2000-cpu.github.io/cloning-project-n1/">LINK</a></button>
+    </div>
+    <section id="CONTACT-US" class="contact-us-container">
+    <h2>Get in Touch</h2>
+    <div class="social-link">
+        <a href="tel:+212666866986">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <a href="mailto:chaymaerachida2000@gmail.com">
+            <i class="fa-solid fa-at"></i>
+        </a>
+        
+
+  <div class="social-link">
+                    <a href="https://github.com/chaymaerachida2000-cpu"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/chaymaesa-said-a17028185/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+        
+<footer>
+        <div id="copyright" style="justify-content: center; align-items: center; display: flex;">
+            <span style="color: azure;">(c) 2026 CHAIMAE SAID</span>
+        
+        </div>
+        </footer>
+        
+</body>
+</html>

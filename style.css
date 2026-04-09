@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #c9ada7, #9a8c98);
+    color: #4a4e69;
+}
+
+/* --- 2. Navigation --- */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #9a8c98;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #4a4e69;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.logo span {
+    color: #f2e9e4;
+    text-shadow: 0 0 10px #c9ada7;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-container .links a {
+    font-size: 1.1rem;
+    color: #4a4e69;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-container .links a:hover {
+    color: #f2e9e4;
+}
+
+.contact-boutun {
+    background-color: #c9ada7;
+    border-radius: 20px;
+    padding: 8px 22px;
+    border: 2px solid #c9ada7;
+    transition: 0.3s;
+}
+
+.contact-boutun a {
+    color: #ffffff !important;
+}
+
+.contact-boutun:hover {
+    background-color: transparent;
+}
+
+
+.hamburg, .cancel {
+    display: none;  
+    cursor: pointer;
+    font-size: 2rem;
+    color: #4a4e69;
+}
+
+/* --- 4. Mobile Dropdown --- */
+.dropdown {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(74, 78, 105, 0.98);
+    z-index: 9999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown.active {
+    display: flex !important; /* Ghadi t-ban mli t-cliki */
+}
+
+.dropdown .links2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.dropdown .links2 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cancel {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: white;
+}
+.hamburg, .cancel, .dropdown {
+    display: none !important;
+}
+
+section {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    
+    width: 100%;
+    max-width: 400px;
+    
+    
+}
+
+.content {
+    width: 50%;
+}
+
+.content h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+.content h1 span {
+    color: #f2e9e4;
+}
+
+.typewriter {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.typewriter span {
+    display: block;
+    color: #f2e9e4;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.social-link i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #4a4e69;
+    border-radius: 50%;
+    color: #f2e9e4;
+    margin-right: 12px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-link i:hover {
+    background-color: #4a4e69;
+    transform: translateY(-5px);
+}
+
+
+.btn {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+.btn button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a4e69;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    margin: 5%;
+}
+.btn button a{
+    width: 100%;
+    padding: 15px;
+    background-color: #4a4e69;
+    color: white ;
+    border: none;
+    
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+.btn button:hover {
+    background-color: #22223b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.btn button:hover a{
+    background-color: #22223b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+@media screen and (max-width: 768px) {
+    .nav-container .links {
+        display: none !important; 
+    }
+    .hamburg {
+        display: block !important; 
+    }
+    .dropdown.active {
+        display: flex !important; 
+    }
+    .cancel {
+        display: block !important;
+    }
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image, .content {
+        width: 100%;
+    }
+    .btn {
+        margin: 30px auto;
+    }
+}
+.titleA{
+    text-align: center;
+}
+.logo-gif{
+   
+    width: 200px;       /* Beddli had l-raqm 3la 7sab kbach bghiti l-logo i-ban */
+    height: auto;      /* Bach i-7afed 3la l-ab3ad dyalo */
+    display: block;    /* Bach may-kounch binat-hom faragh */
+}
+.texte p{
+    color:#4a4e69;
+    text-shadow: 0 0 10px #c9ada7; 
+
+}
+.texte img{
+    max-width: 200px;
+
+}
+.about-content {
+   display: block; /* Beddliha mn flex l-block
+    align-items: center;   /* Bach i-jio m9adin f l-wast verticalement */
+    justify-content: center;
+    gap: 20px;             /* Faragh bin l-imaj w l-ktaba */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;        /* Bach l-container i-ji f l-wast dyal l-ecran */
+}
+
+.about-img img {
+    width: 400px;          
+    height: auto;
+    border-radius: 20px;   
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;               
+}
+
+@keyframes floatAnim {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.line {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #4a4e69;
+    animation: floatAnim 3s ease-in-out infinite; 
+}
+
+.line:nth-child(1) { animation-delay: 0s; }
+.line:nth-child(2) { animation-delay: 0.5s; }
+.line:nth-child(3) { animation-delay: 1s; }
+.about-content img {
+    animation: floatAnim 3s ease-in-out infinite; 
+}
+.MY-HOME{
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;  /* هادي كتجيبهم للوسط (طولاً: من الفوق لتحت) */
+    align-items: center;
+}
+.MY-HOME h1{
+    color:#9a8c98;
+    text-align: center;
+
+}
+.MY-HOME img{
+      width: 100%;
+    max-width: 300px;
+    
+   
+    
+}
+.emoji-wrapper{
+    display: flex;
+    justify-content: space-around; /* كيفرقهم وكيخلي مساحات متساوية بيناتهم */
+   align-content: center;
+    gap: 20px;
+    width: 100%; /* ضروري يكون كاين عرض باش يبان الفرق */
+    
+}
+
+
+.emoji {
+  font-size: 50px;
+  transform :0.3s; /* باش التكبار يجي رطب ماشي مفاجئ */
+  cursor: pointer;
+}
+
+.emoji:hover {
+  transition: scale(1.5); /* الإيموجي كيكبر بـ مرة ونص */
+}
+.text {
+  display: none; 
+}
+
+.container:hover .text {
+  display: inline; 
+}
+.MY-PROJECT img{
+     width: 100%;
+    max-width: 500px;
+    
+}
+.HOME-WORK img{
+  width: 100%;
+    max-width: 200px;
+    
+}
+
+#copyright {
+    height: 10vh;
+    background-color: black;
+    padding: 20px 0;
+    
+}
